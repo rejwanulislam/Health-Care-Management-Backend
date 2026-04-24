@@ -1,0 +1,14 @@
+model DocumentEmbedding{
+    id String @id @default(uuid(7))
+
+    chunkkey String @unique
+    sourceType String
+    sourceId String
+    sorceLabel String?
+    content String
+    metadata Json?
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+}
